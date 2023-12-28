@@ -86,7 +86,11 @@ Foi criado um aplicativo Model Driven do tipo Canvas
 - Botão para cancelar a exclusão do instrutor
 - Botão para confirmar a exclusão do instrutor
 
+https://drive.google.com/file/d/1oNnhseph3D1dLLBiJH2mP4c2ldo4twJk/view?usp=sharing
+
 ### Fluxo Power Automate para envio de e-mail para instrutor habilitado
 
 - Criação do gatilho a partir do Dataverse, com a atualização da tabela Instrutores
 - Ação de envio de e-mail, com a captura do e-mail do instrutor habilitado ao curso disponível
+
+https://drive.google.com/file/d/1NFRKgkuXpkd7r3l4vnrY0Z0R1RPIRCya/view?usp=sharing
