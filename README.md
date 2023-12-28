@@ -12,6 +12,14 @@ Publicador: DYN365 Treinamento
 
 ### Solução para gestão de instituição de ensino fantasia, com o nome de DYNTech Treinamentos. Desafio do Bootcamp CRM e Dynamics 365 da DIO em parceria com a Avanade.
 
+## Aplicativo 
+
+Instruções para importação da solução no Power Apps:
+https://learn.microsoft.com/pt-br/power-apps/maker/canvas-apps/export-import-app
+
+Local:
+/DYNTech Treinamentos/Solução DYNTechTreinamentos_1_2_2.zip
+
 O projeto terá 4 etapas, e você deverá segui-las da seguinte maneira:
 
 O aplicativo foi criado no conceito Model Driven utilizando como Datasource o contexto do formulário em execução.
