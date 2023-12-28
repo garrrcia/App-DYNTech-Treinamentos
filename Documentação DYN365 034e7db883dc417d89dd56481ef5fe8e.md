@@ -6,19 +6,26 @@ Nome: DYNTechTreinamentos
 
 Tipo de Aplicativo: Aplicativo baseado em modelo
 
-Versão: 1.2.0
+Versão: 1.2.2
 
-Publicador: DYN365 Treinamento
+Publicador: DYN365 Treinamento 
 
-Descrição: Solução para gestão de instituição de ensino. Desafio do Bootcamp CRM e Dynamics 365 da DIO em parceria com a Avanade.
+### Solução para gestão de instituição de ensino fantasia, com o nome de DYNTech Treinamentos. Desafio do Bootcamp CRM e Dynamics 365 da DIO em parceria com a Avanade.
 
-Propriedade: Organização
+O projeto terá 4 etapas, e você deverá segui-las da seguinte maneira:
 
-admin@RenataGarcia874.onmicrosoft.com
+O aplicativo foi criado no conceito Model Driven utilizando como Datasource o contexto do formulário em execução.
 
-Truly1992!
+- Deverá conter Cabeçalho;
+- Deverá conter um campo de entrada de texto do tipo caixa de combinação (ComboBox) permitindo a seleção do curso;
+- Deverá conter Detalhe (componente do tipo Gallery);
+- O Campo de entrada de texto deve ser do tipo caixa de combinação (ComboBox), permitindo a seleção do instrutor.
+- Criar Fluxo do Power Automate. Criar um fluxo para que, quando um novo registro de instrutor for criado, envie um e-mail (endereço do e-mail será o informado no cadastro do instrutor).
+- Exportar o aplicativo e postar no GitHub, juntamente com a planilha utilizada para carga dos dados dos estados.
 
-[](https://org656f8b75.crm2.dynamics.com/)
+## Criação da Solução
+
+A solução foi criada no Microsoft Dynamics 365, com a criação das entidades, campos, formulários e recursos da web. 
 
 ## Base de Dados
 
@@ -26,125 +33,13 @@ A base de dados do curso foi obtida no site Kaggle, no formato .CSV
 
 [Multi-Platform Online Courses Dataset](https://www.kaggle.com/datasets/everydaycodings/multi-platform-online-courses-dataset)
 
-[Gerador de nomes de pessoas online - Site 112](https://site112.com/gerador-nomes-pessoas)
-
-Optei por escolher os cursos da Microsoft e retirei as informações que entendi que seriam relevantes para construir o projeto e realizei a modelagem dos dados de acordo com os requisitos solicitados pelo cliente.
-
 Para preencher informações faltantes, utilizei os seguintes recursos:
+
+[Gerador de nomes de pessoas online - Site 112](https://site112.com/gerador-nomes-pessoas)
 
 [Site 112 - Utilitários, ferramentas e recursos online!](https://site112.com/)
 
-Os campos foram criados no Dynamics 365, em seguida foi gerado um **modelo de planilha** para o carregamento das informações no Dataverse.
-
-### Relações
-
-As informações estão dispostas em três tabelas, de acordo com o diagrama UML abaixo:
-
-### Tabela/Entidade:
-
-Aluno
-
-### Colunas/Atributos/Campos:
-
-Canvas Aluno
-
-CPF do aluno	
-
-Nome do aluno: Chave Primária : dyn365_name
-
-Telefone do aluno	
-
-E-mail do aluno
-
-### Tabela/Entidade:
-
-Curso
-
-### Colunas/Atributos/Campos:
-
-Canvas Instrutores: Campo de vínculo com a criação de aplicativo no Power Apps
-
-ID do curso: dyn365_cursoid
-
-Nome do curso:  dyn365_name
-
-Tipo do curso: Pago, Gratuito
-
-Valor do curso: R$ 
-
-Nível do curso: Básico, Intermediário, Avançado
-
-Tipo de certificado: Certificado profissional, Curso, Especialização.
-
-### Tabela/Entidade:
-
-Instrutor
-
-### Colunas/Atributos/Campos:
-
-CPF instrutor
-
-Nome do Instrutor dyn365_name
-
-Nível do instrutor: Principiante, Intermediário, Avançado
-
-E-mail do instrutor:
-
-## Tabelas de Consulta
-
-### Tabela/Entidade: Cursos Disponíveis X Instrutores Habilitados
-
-Relação: N:N
-
-Um único registro de um instrutor para cada curso e vice versa
-
-Criação de chave: Curso X Instrutor
-
-### Tabela/Entidade: Cursos Disponíveis  X Alunos Inscritos
-
-Relação: N:N
-
-Um único registro de um aluno para cada curso e vice versa
-
-Criação de chave: Curso X Aluno
-
-### Regras de negócio
-
-Um cliente deseja criar um aplicativo de gerenciamento de uma plataforma de cursos online. Existe uma lista de cursos com que eles já trabalharam, mas apenas alguns estão disponíveis. 
-
-Os cursos podem ser Pagos ou Gratuitos, sendo obrigatório o preenchimento do campo Valor do curso caso ele seja Pago.
-
-Os cursos estão identificados por um ID, enquanto os Instrutores e Alunos são identificados pelo CPF.
-
-Nome da regra de negócios: Obrigatoriedade do Campo Valor do Curso
-
-Descrição: Preenchimento obrigatório do campo Valor do Curso caso o campo Tipo do Curso for definido como Pago
-
-Condição
-
-Nome de exibição: Campo Tipo de curso Pago
-
-Entidade: Curso
-
-![Untitled](Documentac%CC%A7a%CC%83o%20DYN365%20034e7db883dc417d89dd56481ef5fe8e/Untitled.png)
-
-Nome de Exibição: Campo Valor do curso obrigatório
-
-Entidade: Cursos
-
-Requisitos Comerciais: Obrigatório
-
-![Untitled](Documentac%CC%A7a%CC%83o%20DYN365%20034e7db883dc417d89dd56481ef5fe8e/Untitled%201.png)
-
-Nome de Exibição: Campo Valor do curso não obrigatório
-
-Entidade: Cursos
-
-Requisitos Comerciais: Não é obrigatório
-
-![Untitled](Documentac%CC%A7a%CC%83o%20DYN365%20034e7db883dc417d89dd56481ef5fe8e/Untitled%202.png)
-
-![Untitled](Documentac%CC%A7a%CC%83o%20DYN365%20034e7db883dc417d89dd56481ef5fe8e/Untitled%203.png)
+Os campos foram criados anteriormente,e em seguida foi gerado um **modelo de planilha** para o input das informações no Dataverse.
 
 ## Recursos da Web
 
@@ -160,52 +55,45 @@ Imagem de exibição do aplicativo
 
 Adição do botão Curso na Ribbon na guia de criação de cursos
 
-## Fluxos
+Foi criado um aplicativo Model Driven do tipo Canvas
 
-## Exportação
+## Demonstração do Aplicativo
 
-![Untitled](Documentac%CC%A7a%CC%83o%20DYN365%20034e7db883dc417d89dd56481ef5fe8e/Untitled%204.png)
+### Tela principal com os instrutores habilitados
 
-![Untitled](Documentac%CC%A7a%CC%83o%20DYN365%20034e7db883dc417d89dd56481ef5fe8e/Untitled%205.png)
+- Cabeçalho com Título principal
+- Botão Adicionar Instrutor (cabeçalho)
+- Cabeçalho com nome das colunas
+- Gallery exibindo os instrutores habilitados
+    - Campo com Nome do Instrutor
+    - Campo com o Nível do Instrutor
+- Botão para excluir instrutor (em cada linha da gallery)
 
-![Untitled](Documentac%CC%A7a%CC%83o%20DYN365%20034e7db883dc417d89dd56481ef5fe8e/Untitled%206.png)
+### Tela para adicionar instrutor
 
-![Untitled](Documentac%CC%A7a%CC%83o%20DYN365%20034e7db883dc417d89dd56481ef5fe8e/Untitled%207.png)
+- Cabeçalho com Título principal
+- Caixa de combinação (combobox) para seleção do instrutor
+- Rótulo para exibir Nível do instrutor selecionado
+- Botão para cancelar a inclusão do instrutor
+- Botão para salvar a inclusão do instrutor
 
-```
-Patch('Cursos X Instrutores'; Defaults('Cursos X Instrutores');
-{
-    Instrutores: CmbInstrutor.Selected;
-    'Cursos Disponíveis': [@ModelDrivenFormIntegration].Item;
-    Nome:[@ModelDrivenFormIntegration].Nome & " - " & CmbInstrutor.Selected.'Nome do Instrutor'
-}
-);;
-Reset(CmbInstrutor);;
-Back()
-```
+### Tela para excluir instrutor
 
-![Untitled](Documentac%CC%A7a%CC%83o%20DYN365%20034e7db883dc417d89dd56481ef5fe8e/Untitled%208.png)
+- Cabeçalho com Título principal
+- Rótulo com texto para conferência do instrutor a ser excluído
+- Rótulo com o nome do instrutor a ser excluído
+- Rótulo para exibir Nível do instrutor selecionado
+- Botão para cancelar a exclusão do instrutor
+- Botão para confirmar a exclusão do instrutor
 
-![Untitled](Documentac%CC%A7a%CC%83o%20DYN365%20034e7db883dc417d89dd56481ef5fe8e/Untitled%209.png)
+### Fluxo Power Automate para envio de e-mail para instrutor habilitado
 
-```
-Patch('Cursos X Instrutores'; Defaults('Cursos X Instrutores');
-{
-    'Instrutores Habilitados': CmbInstrutor.Selected;
-    'Cursos Disponíveis': CmbCursosDisponiveis.Selected;
-    Nome: CmbCursosDisponiveis.Selected.'Nome do curso' & " - " & CmbInstrutor.Selected.'Nome do Instrutor'
-  
-}
-);;
-Reset(CmbInstrutor);;
-Reset(CmbCursosDisponiveis);;
-Back()
-```
+- Criação do gatilho a partir do Dataverse, com a atualização da tabela Instrutores
+- Ação de envio de e-mail, com a captura do e-mail do instrutor habilitado ao curso disponível
 
-![Untitled](Documentac%CC%A7a%CC%83o%20DYN365%20034e7db883dc417d89dd56481ef5fe8e/Untitled%2010.png)
 
-**Remove( IceCream,LookUp( IceCream, Flavor="Chocolate" ))**
 
-Filter(Instrutores; 'Instrutores (Modos de exibição)'.'Exibição Associada de Instrutor')
+[<img src="https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg" width="50%">](https://youtu.be/dy4minjCUVs "Demonstração App DYNTech")
 
-'Cursos X Instrutores’
+[<img src="https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg" width="50%">](https://youtu.be/TguHdrkR3x4 "Demonstração Fluxo de E-mail")
+ 
